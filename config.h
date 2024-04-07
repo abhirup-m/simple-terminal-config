@@ -93,10 +93,10 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-/* one dark theme */
+/* numix theme */
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-"#282c34", /* base00 */
+  "#2D2D2D", /* base00 */
   "#e06c75", /* base08 */
   "#98c379", /* base0B */
   "#e5c07b", /* base0A */
@@ -106,8 +106,8 @@ static const char *colorname[] = {
   "#abb2bf", /* base05 */
   "#545862", /* base03 */
   "#d19a66", /* base09 */
-  "#353b45", /* base01 */
-  "#3e4451", /* base02 */
+  "#575c56", /* base01 */
+  "#D64937", /* base02 */
   "#565c64", /* base04 */
   "#b6bdca", /* base06 */
   "#be5046", /* base0F */
