@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "RobotoMono Nerd Font Propo:pixelsize=19:antialias=true:autohint=true";
+static char *font = "Roboto Mono:pixelsize=21:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -93,30 +93,47 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-/* numix theme */
-/* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  "#2D2D2D", /* base00 */
-  "#e06c75", /* base08 */
-  "#98c379", /* base0B */
-  "#e5c07b", /* base0A */
-  "#61afef", /* base0D */
-  "#c678dd", /* base0E */
-  "#56b6c2", /* base0C */
-  "#abb2bf", /* base05 */
-  "#545862", /* base03 */
-  "#d19a66", /* base09 */
-  "#575c56", /* base01 */
-  "#D64937", /* base02 */
-  "#565c64", /* base04 */
-  "#b6bdca", /* base06 */
-  "#be5046", /* base0F */
-  "#c8ccd4", /* base07 */
+	"#1c1c1c",
+	"#af005f",
+	"#5faf00",
+	"#d7af5f",
+	"#5fafd7",
+	"#808080",
+	"#d7875f",
+	"#d0d0d0",
+	"#585858",
+	"#5faf5f",
+	"#afd700",
+	"#af87d7",
+	"#ffaf00",
+	"#ffaf00",
+	"#00afaf",
+	"#5f8787",
 };
 
-unsigned int defaultfg = 7;
+// static const char *colorname[] = {
+//   "#2D2D2D", /* base00 */
+//   "#e06c75", /* base08 */
+//   "#98c379", /* base0B */
+//   "#e5c07b", /* base0A */
+//   "#61afef", /* base0D */
+//   "#c678dd", /* base0E */
+//   "#56b6c2", /* base0C */
+//   "#abb2bf", /* base05 */
+//   "#545862", /* base03 */
+//   "#d19a66", /* base09 */
+//   "#575c56", /* base01 */
+//   "#D64937", /* base02 */
+//   "#565c64", /* base04 */
+//   "#b6bdca", /* base06 */
+//   "#be5046", /* base0F */
+//   "#c8ccd4", /* base07 */
+// };
+
+unsigned int defaultfg = 5;
 unsigned int defaultbg = 0;
-unsigned int defaultcs = 13;
+unsigned int defaultcs = 5;
 static unsigned int defaultrcs = 0;
 /*
  * Default shape of cursor
@@ -160,8 +177,8 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ NULL,            Button4, kscrollup,      {.i = 1} },
-	{ NULL,            Button5, kscrolldown,    {.i = 1} },
+	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = 1} },
+	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = 1} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
